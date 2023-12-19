@@ -1,8 +1,8 @@
 import D "mo:base/Debug";
 
 actor DBank {
-  var currentValue = 500;
-  currentValue := 100;
+  stable var currentValue : Nat = 500;
+  //currentValue := 100;
 
   let id = 234234761872;
   // D.print(debug_show (id));
@@ -28,4 +28,5 @@ actor DBank {
   public query func checkBalance() : async Nat {
     return currentValue;
   };
+
 };
